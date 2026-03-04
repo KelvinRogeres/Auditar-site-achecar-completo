@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Achecar | Consulta veicular completa pela placa</title>
+    <meta
+      name="description"
+      content="Consulte o historico veicular completo pela placa em segundos. Evite surpresas na compra e venda de veiculos com dados confiaveis, atualizados e relatorio simples de entender."
+    />
+    <link rel="canonical" href="https://www.achecar.com.br/" />
+    <meta name="theme-color" content="#E53935" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Achecar | Consulta veicular completa" />
+    <meta
+      property="og:description"
+      content="Historico veicular completo pela placa, em segundos. Consulte e compre com seguranca."
+    />
+    <meta property="og:url" content="https://www.achecar.com.br/" />
+    <meta property="og:image" content="https://www.achecar.com.br/og/achecar.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Achecar",
+        "url": "https://www.achecar.com.br/"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Consulta veicular completa",
+        "serviceType": "Consulta de historico veicular",
+        "areaServed": "BR",
+        "provider": {
+          "@type": "Organization",
+          "name": "Achecar",
+          "url": "https://www.achecar.com.br/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "79.90",
+          "priceCurrency": "BRL",
+          "url": "https://www.achecar.com.br/consulta"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quanto tempo leva para consultar o historico de um veiculo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Em poucos segundos apos informar a placa, voce recebe o relatorio completo com dados oficiais e atualizados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A Achecar oferece consulta veicular gratuita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A consulta completa e paga. Voce pode acessar uma demonstracao do relatorio para entender o que esta incluido antes da compra."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "As informacoes incluem recall e historico de sinistros?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O relatorio cobre eventos relevantes como recalls, sinistros, leilao, restricoes e outros pontos criticos do historico do veiculo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Por quanto tempo a consulta fica disponivel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A consulta permanece disponivel para voce acessar novamente quando precisar."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteudo</a>
+
+    <div class="topbar" role="region" aria-label="Cupom promocional">
+      <div class="container topbar-inner">
+        <div class="topbar-text">
+          <span class="badge">Cupom 10% OFF</span>
+          <span>Primeira compra com desconto imediato.</span>
+        </div>
+        <div class="topbar-actions">
+          <span class="coupon" data-coupon="CUPOM10">CUPOM10</span>
+          <button class="btn btn-ghost" type="button" data-coupon-copy>
+            Copiar cupom
+          </button>
+          <span class="sr-only" id="coupon-status" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/" aria-label="Achecar">
+          <img
+            class="logo-img"
+            src="assets/logo-achecar.png"
+            alt="Achecar"
+            width="160"
+            height="40"
+            loading="eager"
+          />
+        </a>
+
+        <details class="nav-details">
+          <summary>Menu</summary>
+          <nav class="main-nav" aria-label="Principal">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="products.html">Produtos</a>
+            <a href="solutions.html">Solucoes</a>
+            <a href="pricing.html">Precos</a>
+            <a href="blog.html">Blog</a>
+            <a href="resources.html">Recursos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contato</a>
+          </nav>
+        </details>
+
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="/login">Entrar</a>
+          <a class="btn btn-primary" href="#consulta">Consultar veiculo</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero section" id="consulta">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">Consulta veicular completa</p>
+            <h1>Historico veicular pela placa em segundos.</h1>
+            <p class="lead">
+              Tome decisoes seguras na compra ou venda do seu carro. A Achecar
+              entrega um relatorio simples de entender, com dados atualizados e
+              fontes confiaveis.
+            </p>
+
+            <form class="plate-form" action="/consulta" method="get">
+              <label for="placa">Digite a placa do veiculo</label>
+              <div class="plate-input">
+                <input
+                  id="placa"
+                  name="placa"
+                  type="text"
+                  inputmode="latin"
+                  autocomplete="off"
+                  autocapitalize="characters"
+                  maxlength="7"
+                  placeholder="Ex: BRA2E19"
+                  aria-describedby="placa-ajuda"
+                  data-plate-input
+                  required
+                />
+                <button class="btn btn-primary" type="submit">
+                  Consultar agora
+                </button>
+              </div>
+              <p class="help-text" id="placa-ajuda">
+                Aceita placas no formato antigo e Mercosul. Seus dados nao sao
+                compartilhados.
+              </p>
+            </form>
+
+            <div class="hero-cta">
+              <a class="btn btn-secondary" href="#relatorio">
+                Ver exemplo de relatorio
+              </a>
+              <a class="btn btn-ghost" href="#precos">Ver planos</a>
+            </div>
+
+            <ul class="trust-list">
+              <li>Dados em tempo real</li>
+              <li>Relatorio completo e visual</li>
+              <li>Compra mais segura e sem surpresas</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" role="img" aria-label="Ilustracao de carro e relatorio veicular">
+            <div class="hero-card">
+              <p class="card-title">Relatorio Achecar</p>
+              <div class="card-row">
+                <span>Sinistros</span>
+                <strong>Sem ocorrencias</strong>
+              </div>
+              <div class="card-row">
+                <span>Restricoes</span>
+                <strong>Nenhuma</strong>
+              </div>
+              <div class="card-row">
+                <span>Leilao</span>
+                <strong>Sem registros</strong>
+              </div>
+              <div class="card-progress">
+                <span>Score de transparencia</span>
+                <div class="bar"><span></span></div>
+              </div>
+            </div>
+            <div class="hero-chip">Dados atualizados</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="como-funciona" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>Como funciona a consulta</h2>
+            <p>
+              Processo simples, direto e transparente. Em poucos cliques voce
+              acessa o historico completo do veiculo.
+            </p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <h3>Informe a placa</h3>
+              <p>Digite a placa e confirme o veiculo.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <h3>Escolha o plano</h3>
+              <p>Selecione a consulta completa com acesso imediato.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <h3>Receba o relatorio</h3>
+              <p>Visualize tudo online e baixe quando quiser.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="relatorio" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>O que o relatorio mostra</h2>
+            <p>
+              Informacoes criticas para comprar com seguranca e valorizar sua
+              negociacao.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Debitos e multas</h3>
+              <p>Situacao financeira atualizada e sem surpresas.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Risco de comercializacao</h3>
+              <p>Veja impedimentos e restricoes antes de fechar negocio.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Roubo e furto</h3>
+              <p>Confirme se existe registro em bases oficiais.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Leilao e sinistros</h3>
+              <p>Historico de leilao, batidas e eventos relevantes.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Decodificador de chassi</h3>
+              <p>Valide dados tecnicos e origens do veiculo.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Precificador e grafico</h3>
+              <p>Compare valores com o mercado para negociar melhor.</p>
+            </article>
+          </div>
+          <div class="section-cta">
+            <a class="btn btn-primary" href="#consulta">Consultar meu veiculo</a>
+            <a class="btn btn-ghost" href="#precos">Ver planos e preco</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="selo" data-cv>
+        <div class="container split">
+          <div>
+            <h2>Selo verificado para vender mais rapido</h2>
+            <p>
+              Destaque sua oferta em plataformas como Webmotors e OLX. O selo
+              aumenta a confianca do comprador e acelera a decisao.
+            </p>
+            <ul class="check-list">
+              <li>QR Code e link para o relatorio</li>
+              <li>Mais transparencia, menos negociacao perdida</li>
+              <li>Credibilidade para lojistas e revendedores</li>
+            </ul>
+            <div class="section-cta">
+              <a class="btn btn-secondary" href="#contato">Quero o selo</a>
+            </div>
+          </div>
+          <div class="card highlight">
+            <h3>Verificacao maxima</h3>
+            <p>
+              O nivel mais completo de dados, do historico de fabricacao ate
+              restricoes judiciais.
+            </p>
+            <div class="mini-badges">
+              <span>QR Code + Link</span>
+              <span>Valido em todo o Brasil</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="estatisticas" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>Numeros que sustentam a decisao</h2>
+            <p>
+              Use dados reais para reforcar confianca. Conecte esta secao ao
+              seu painel de metricas.
+            </p>
+          </div>
+          <div class="stats">
+            <div class="stat" data-stat data-key="consultas">
+              <span class="stat-value">--</span>
+              <span class="stat-label">consultas mensais</span>
+            </div>
+            <div class="stat" data-stat data-key="frota">
+              <span class="stat-value">--</span>
+              <span class="stat-label">veiculos na frota nacional</span>
+            </div>
+            <div class="stat" data-stat data-key="risco">
+              <span class="stat-value">--</span>
+              <span class="stat-label">alertas de risco evitados</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testemunhos" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>Confianca validada por quem negocia todos os dias</h2>
+            <p>
+              Depoimentos reais e sinais de autoridade que reduzem o risco da
+              compra.
+            </p>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                “Fechei a compra com seguranca porque o relatorio mostrou tudo
+                o que o vendedor nao tinha mencionado.”
+              </p>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">Marina P.</span>
+                <span class="testimonial-role">Compradora particular</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                “O selo verificado aumentou a conversao na loja. Mais confianca
+                e menos objecoes no fechamento.”
+              </p>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">Rafael S.</span>
+                <span class="testimonial-role">Revendedor</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p class="testimonial-quote">
+                “A Achecar virou parte do nosso processo. Economizamos tempo e
+                evitamos riscos escondidos.”
+              </p>
+              <div class="testimonial-meta">
+                <span class="testimonial-name">Carla M.</span>
+                <span class="testimonial-role">Gestora de frota</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="recursos-home" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>Recursos para decidir com mais criterio</h2>
+            <p>
+              Guias, checklists e materiais para entender o historico do
+              veiculo e negociar melhor.
+            </p>
+          </div>
+          <div class="resource-grid">
+            <a class="resource-card" href="resources.html">
+              <span class="pill">Guia</span>
+              <h3>Checklist de compra segura</h3>
+              <p>Passo a passo com os pontos criticos antes de fechar negocio.</p>
+            </a>
+            <a class="resource-card" href="blog.html">
+              <span class="pill">Blog</span>
+              <h3>Insights sobre mercado e veiculos</h3>
+              <p>Conteudo atualizado para quem compra, vende ou revende.</p>
+            </a>
+            <a class="resource-card" href="faq.html">
+              <span class="pill">FAQ</span>
+              <h3>Respostas rapidas e diretas</h3>
+              <p>Resolva duvidas comuns antes de iniciar a consulta.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="precos" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>Consulta veicular completa</h2>
+            <p>
+              Historico mais completo do mercado com acesso imediato e suporte
+              especializado.
+            </p>
+          </div>
+          <div class="pricing">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <span class="badge">Economize 20%</span>
+                <p class="price-old">De R$ 95,88</p>
+                <p class="price-now">R$ 79,90</p>
+                <p class="price-note">por consulta</p>
+              </div>
+              <ul class="pricing-list">
+                <li>Historico completo do veiculo</li>
+                <li>Decodificador de chassi, gravame, renajud</li>
+                <li>Grafico de preco e precificador</li>
+                <li>Relatorio visual, facil de compartilhar</li>
+              </ul>
+              <a class="btn btn-primary" href="/consulta">Comprar agora</a>
+              <a class="btn btn-ghost" href="#relatorio">Ver modelo</a>
+            </div>
+            <div class="pricing-aside">
+              <h3>Garantia Achecar</h3>
+              <p>
+                Se o relatorio nao entregar as informacoes prometidas, voce
+                recebe orientacao imediata e suporte dedicado.
+              </p>
+              <ul class="check-list">
+                <li>Atendimento humano de segunda a sexta</li>
+                <li>Suporte via WhatsApp e e-mail</li>
+                <li>Pagamento seguro com bandeiras reconhecidas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="faq" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>Perguntas frequentes</h2>
+            <p>Respostas rapidas para decidir com confianca.</p>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Quanto tempo leva para consultar o historico?</summary>
+              <p>Em poucos segundos apos informar a placa.</p>
+            </details>
+            <details>
+              <summary>A consulta e gratuita?</summary>
+              <p>O relatorio completo e pago. Voce pode ver um modelo antes.</p>
+            </details>
+            <details>
+              <summary>O relatorio inclui recall e sinistros?</summary>
+              <p>Sim, cobrimos recalls, sinistros, leilao e restricoes.</p>
+            </details>
+            <details>
+              <summary>Por quanto tempo o relatorio fica disponivel?</summary>
+              <p>Voce pode acessar novamente sempre que precisar.</p>
+            </details>
+          </div>
+          <div class="section-cta">
+            <a class="btn btn-secondary" href="/ajuda">Ver todas as duvidas</a>
+            <a class="btn btn-primary" href="#consulta">Consultar veiculo</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contato" data-cv>
+        <div class="container split">
+          <div>
+            <h2>Fale com especialistas</h2>
+            <p>
+              Atendimento de segunda a sexta, das 08h as 17h. Respondemos
+              rapido por WhatsApp ou e-mail.
+            </p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="https://wa.me/message/ZCXOCBUNQ2V6A1">
+                Iniciar conversa
+              </a>
+              <a class="btn btn-ghost" href="tel:08000004770">Ligar 0800 000 4770</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Mapa do site</h3>
+            <ul class="link-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Produtos</a></li>
+              <li><a href="solutions.html">Solucoes</a></li>
+              <li><a href="pricing.html">Precos</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="resources.html">Recursos</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <img
+              class="logo-img"
+              src="assets/logo-achecar.png"
+              alt="Achecar"
+              width="160"
+              height="40"
+              loading="lazy"
+            />
+          </div>
+          <p>Consulta veicular pela placa com dados confiaveis.</p>
+        </div>
+        <div>
+          <h4>Institucional</h4>
+          <ul class="link-list">
+            <li><a href="/termos-de-servico">Termos de uso</a></li>
+            <li><a href="/politica-de-privacidade">Politica de privacidade</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul class="link-list">
+            <li>0800 000 4770</li>
+            <li>WhatsApp disponivel no horario comercial</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>(c) 2026 Achecar. Todos os direitos reservados.</span>
+      </div>
+    </footer>
+  </body>
+</html>

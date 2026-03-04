@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Achecar | Produtos e servicos</title>
+    <meta
+      name="description"
+      content="Conheca os produtos Achecar: consulta veicular, selo verificado e monitoramento continuo para compras e vendas seguras."
+    />
+    <link rel="canonical" href="https://www.achecar.com.br/produtos" />
+    <meta name="theme-color" content="#E53935" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Achecar | Produtos" />
+    <meta
+      property="og:description"
+      content="Consulta veicular, selo verificado e monitoramento para negociacoes seguras."
+    />
+    <meta property="og:url" content="https://www.achecar.com.br/produtos" />
+    <meta property="og:image" content="https://www.achecar.com.br/og/achecar.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteudo</a>
+
+    <div class="topbar" role="region" aria-label="Cupom promocional">
+      <div class="container topbar-inner">
+        <div class="topbar-text">
+          <span class="badge">Cupom 10% OFF</span>
+          <span>Primeira compra com desconto imediato.</span>
+        </div>
+        <div class="topbar-actions">
+          <span class="coupon" data-coupon="CUPOM10">CUPOM10</span>
+          <button class="btn btn-ghost" type="button" data-coupon-copy>
+            Copiar cupom
+          </button>
+          <span class="sr-only" id="coupon-status" aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Achecar">
+          <img
+            class="logo-img"
+            src="assets/logo-achecar.png"
+            alt="Achecar"
+            width="160"
+            height="40"
+            loading="eager"
+          />
+        </a>
+
+        <details class="nav-details">
+          <summary>Menu</summary>
+          <nav class="main-nav" aria-label="Principal">
+            <a href="index.html">Home</a>
+            <a href="products.html" aria-current="page">Produtos</a>
+            <a href="solutions.html">Solucoes</a>
+            <a href="pricing.html">Precos</a>
+            <a href="blog.html">Blog</a>
+            <a href="resources.html">Recursos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contato</a>
+          </nav>
+        </details>
+
+        <div class="header-cta">
+          <a class="btn btn-secondary" href="/login">Entrar</a>
+          <a class="btn btn-primary" href="pricing.html">Consultar veiculo</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Produtos</span>
+          </div>
+          <h1>Produtos pensados para cada tipo de negociacao.</h1>
+          <p class="lead">
+            Escolha o formato ideal para comprar, vender ou gerenciar frotas
+            com mais seguranca.
+          </p>
+          <div class="page-hero-actions">
+            <a class="btn btn-primary" href="product-detail.html">Ver consulta completa</a>
+            <a class="btn btn-ghost" href="pricing.html">Ver precos</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-cv>
+        <div class="container">
+          <div class="section-header">
+            <h2>Catalogo Achecar</h2>
+            <p>Produtos e servicos para cada etapa da jornada.</p>
+          </div>
+          <div class="content-grid">
+            <div class="content-card">
+              <span class="pill">Principal</span>
+              <h3>Consulta veicular completa</h3>
+              <p>Historico completo com dados oficiais e relatorio visual.</p>
+              <a class="btn btn-secondary" href="product-detail.html">Ver detalhes</a>
+            </div>
+            <div class="content-card">
+              <span class="pill">Venda</span>
+              <h3>Selo verificado</h3>
+              <p>Credibilidade imediata para anuncios em marketplaces.</p>
+              <a class="btn btn-secondary" href="solutions.html">Ver solucao</a>
+            </div>
+            <div class="content-card">
+              <span class="pill">Monitoramento</span>
+              <h3>Alertas continuos</h3>
+              <p>Novos eventos e restricoes enviadas em tempo real.</p>
+              <a class="btn btn-secondary" href="contact.html">Solicitar demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" data-cv>
+        <div class="container split">
+          <div>
+            <h2>Fluxo de exploracao</h2>
+            <p>
+              Caminho recomendado para encontrar o produto ideal sem sobrecarga
+              cognitiva.
+            </p>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <strong>1. Escolha a categoria</strong>
+                <span>Compra, venda ou frota.</span>
+              </div>
+              <div class="flow-step">
+                <strong>2. Veja detalhes do produto</strong>
+                <span>Entenda cobertura e dados disponiveis.</span>
+              </div>
+              <div class="flow-step">
+                <strong>3. Compare e finalize</strong>
+                <span>Escolha o plano e conclua a consulta.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card highlight">
+            <h3>Precisa de algo customizado?</h3>
+            <p>Integre dados Achecar via API para processos em escala.</p>
+            <a class="btn btn-primary" href="contact.html">Falar com especialistas</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <img
+              class="logo-img"
+              src="assets/logo-achecar.png"
+              alt="Achecar"
+              width="160"
+              height="40"
+              loading="lazy"
+            />
+          </div>
+          <p>Consulta veicular pela placa com dados confiaveis.</p>
+        </div>
+        <div>
+          <h4>Institucional</h4>
+          <ul class="link-list">
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="/termos-de-servico">Termos de uso</a></li>
+            <li><a href="/politica-de-privacidade">Politica de privacidade</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul class="link-list">
+            <li>0800 000 4770</li>
+            <li>WhatsApp disponivel no horario comercial</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>(c) 2026 Achecar. Todos os direitos reservados.</span>
+      </div>
+    </footer>
+  </body>
+</html>
