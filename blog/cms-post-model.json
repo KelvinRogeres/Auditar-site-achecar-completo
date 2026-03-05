@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AchecarBlogPost",
+  "type": "object",
+  "required": [
+    "title",
+    "slug",
+    "summary",
+    "content",
+    "featuredImage",
+    "category",
+    "tags",
+    "author",
+    "publishedAt",
+    "seo"
+  ],
+  "properties": {
+    "title": { "type": "string", "minLength": 8 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "summary": { "type": "string", "minLength": 20 },
+    "content": { "type": "string", "minLength": 120 },
+    "featuredImage": { "type": "string", "format": "uri" },
+    "category": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "author": { "type": "string" },
+    "publishedAt": { "type": "string", "format": "date" },
+    "updatedAt": { "type": "string", "format": "date" },
+    "seo": {
+      "type": "object",
+      "required": [
+        "metaTitle",
+        "metaDescription",
+        "ogTitle",
+        "ogDescription",
+        "ogImage",
+        "canonical",
+        "indexation"
+      ],
+      "properties": {
+        "metaTitle": { "type": "string", "minLength": 10, "maxLength": 65 },
+        "metaDescription": { "type": "string", "minLength": 70, "maxLength": 160 },
+        "ogTitle": { "type": "string" },
+        "ogDescription": { "type": "string" },
+        "ogImage": { "type": "string", "format": "uri" },
+        "canonical": { "type": "string", "format": "uri" },
+        "indexation": {
+          "type": "string",
+          "enum": ["index,follow", "noindex,nofollow"]
+        }
+      }
+    },
+    "extras": {
+      "type": "object",
+      "properties": {
+        "readingTime": { "type": "integer", "minimum": 1 },
+        "featured": { "type": "boolean" },
+        "pinned": { "type": "boolean" },
+        "finalCta": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "text": { "type": "string" },
+            "label": { "type": "string" },
+            "href": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

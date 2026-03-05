@@ -1,7 +1,3 @@
-const couponButton = document.querySelector("[data-coupon-copy]");
-const couponText = document.querySelector("[data-coupon]");
-const couponStatus = document.querySelector("#coupon-status");
-
 async function copyToClipboard(value) {
   if (navigator.clipboard && window.isSecureContext) {
     await navigator.clipboard.writeText(value);
@@ -19,18 +15,32 @@ async function copyToClipboard(value) {
   document.body.removeChild(temp);
 }
 
-if (couponButton && couponText) {
-  couponButton.addEventListener("click", async () => {
-    try {
-      await copyToClipboard(couponText.textContent.trim());
-      if (couponStatus) {
-        couponStatus.textContent = "Cupom copiado com sucesso.";
+const couponButtons = document.querySelectorAll("[data-coupon-copy]");
+if (couponButtons.length) {
+  couponButtons.forEach((couponButton) => {
+    const scopedCoupon = couponButton
+      .closest("section, div, header, main")
+      ?.querySelector("[data-coupon]");
+    const couponText = scopedCoupon || document.querySelector("[data-coupon]");
+    const statusId = couponButton.getAttribute("aria-controls");
+    const couponStatus = statusId
+      ? document.getElementById(statusId)
+      : document.querySelector("#coupon-status");
+
+    if (!couponText) return;
+
+    couponButton.addEventListener("click", async () => {
+      try {
+        await copyToClipboard(couponText.textContent.trim());
+        if (couponStatus) {
+          couponStatus.textContent = "Cupom copiado com sucesso.";
+        }
+      } catch (err) {
+        if (couponStatus) {
+          couponStatus.textContent = "Nao foi possivel copiar o cupom.";
+        }
       }
-    } catch (err) {
-      if (couponStatus) {
-        couponStatus.textContent = "Nao foi possivel copiar o cupom.";
-      }
-    }
+    });
   });
 }
 
@@ -57,6 +67,42 @@ if (statsElements.length) {
       valueEl.textContent = statsData[key];
     } else {
       valueEl.textContent = "Atualize";
+    }
+  });
+}
+
+const forms = document.querySelectorAll("form");
+forms.forEach((form) => {
+  form.addEventListener("submit", () => {
+    const submitBtn = form.querySelector("button[type='submit']");
+    if (submitBtn) {
+      submitBtn.classList.add("is-loading");
+      submitBtn.setAttribute("aria-busy", "true");
+      if (!submitBtn.dataset.originalText) {
+        submitBtn.dataset.originalText = submitBtn.textContent;
+      }
+      submitBtn.textContent = "Enviando...";
+    }
+  });
+});
+
+const urlParams = new URLSearchParams(window.location.search);
+const plateParam = urlParams.get("plate");
+if (plateParam) {
+  const cleanedPlate = plateParam.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 7);
+  document.querySelectorAll("[data-plate]").forEach((el) => {
+    el.textContent = cleanedPlate || "---";
+  });
+  document.querySelectorAll("[data-plate-input]").forEach((input) => {
+    if (!input.value) input.value = cleanedPlate;
+  });
+  document.querySelectorAll("[data-plate-link]").forEach((link) => {
+    try {
+      const url = new URL(link.getAttribute("href"), window.location.href);
+      url.searchParams.set("plate", cleanedPlate);
+      link.setAttribute("href", url.toString());
+    } catch (err) {
+      // ignore invalid URLs
     }
   });
 }
